@@ -21,8 +21,8 @@ RUN curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/sk
 
 FROM alpine:latest
 
-RUN apk add --no-cache aws-cli bash
-
 # COPY --from=binary /usr/local/bin/aws /usr/local/bin/aws
 COPY --from=binary /usr/local/bin/kubectl /usr/local/bin/kubectl
 COPY --from=binary /usr/local/bin/skaffold /usr/local/bin/skaffold
+
+RUN apk add --no-cache aws-cli bash jq
