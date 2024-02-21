@@ -25,4 +25,4 @@ FROM alpine:latest
 COPY --from=binary /usr/local/bin/kubectl /usr/local/bin/kubectl
 COPY --from=binary /usr/local/bin/skaffold /usr/local/bin/skaffold
 
-RUN apk add --no-cache aws-cli docker-cli bash jq uuidgen yq git
+RUN apk add --no-cache aws-cli docker-cli bash jq uuidgen yq git gettext
