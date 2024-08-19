@@ -13,4 +13,4 @@ FROM alpine:latest
 
 COPY --from=binary /usr/local/bin/kubectl /usr/local/bin/kubectl
 
-RUN apk add --no-cache coreutils aws-cli docker-cli bash jq uuidgen yq git gettext
+RUN apk add --no-cache coreutils aws-cli docker-cli bash jq uuidgen yq git gettext curl
